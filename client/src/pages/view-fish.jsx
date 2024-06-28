@@ -8,7 +8,7 @@ export default function ViewFish() {
         const fetchAllFish = async () => {
             try {
                 const res = await axios.get(
-                    "http://fish-information-system-api-production.up.railway.app/fish-data"
+                    `${process.env.REACT_APP_BACKEND_URL}/fish-data`
                 );
                 setFish(res.data);
             } catch (err) {
