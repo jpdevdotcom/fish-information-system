@@ -10,13 +10,7 @@ const db = mysql.createConnection(urlDB);
 const app = express();
 let responseData;
 app.use(express.json());
-app.use(
-    cors({
-        origin: ["https://fish-information-client.vercel.app/view-fish"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
-    })
-);
+app.use(cors());
 
 // API
 const options = {

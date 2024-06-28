@@ -9,7 +9,7 @@ export default function FishGenera() {
         const fetchFishGenera = async () => {
             try {
                 const res = await axios.get(
-                    "http://http://fish-information-system-production.up.railway.app/fish-data"
+                    `${process.env.REACT_APP_BACKEND_URL}/fish-data`
                 );
                 setGenera(res.data);
             } catch (err) {
